@@ -56,8 +56,7 @@ download_semgrep () {
     curl -sL "https://github.com/returntocorp/semgrep/releases/download/v${version}/semgrep-v${version}-${suffix}" -o "${download_path}/archive"
     curl -sL "https://github.com/returntocorp/semgrep/releases/download/v${version}/semgrep-v${version}-${suffix}.sha256" -o "${download_path}/archive.sha256"
     
-    echo 'verifying checksum'
-    echo '123'
+    echo 'verifying checksum 123'
     if ! check_shasum "${download_path}/archive" "${download_path}/archive.sha256"; then
         echo "Authenticity of package archive can not be assured. Exiting."
         exit 1
